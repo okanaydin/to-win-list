@@ -75,7 +75,6 @@ public class ReportActivity extends AppCompatActivity {
                     ObjectOutputStream oos = new ObjectOutputStream(fos);
                     oos.writeObject(report);
                     Toast.makeText(getApplicationContext(),"Başarıyla gönderildi.",Toast.LENGTH_SHORT).show();
-                    int permissionCheck = ContextCompat.checkSelfPermission(getApplicationContext(), Manifest.permission.WRITE_EXTERNAL_STORAGE);
                     Intent i = new Intent(getApplicationContext(),MainActivity.class);
                     startActivity(i);
                 } catch (FileNotFoundException e) {

@@ -19,7 +19,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".ReportActivity" />
-        <activity android:name=".Prize"></activity>
+        <activity android:name=".Prize" />
+        <activity android:name=".Login" />
+        <activity android:name=".Confirmation"></activity>
     </application>
 
 </manifest>
