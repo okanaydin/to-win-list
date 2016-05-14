@@ -11,6 +11,8 @@ import android.widget.ImageButton;
 public class MainActivity extends AppCompatActivity {
     Button disButton,ellerButton,kitapButton,meyveButton,odaButton,odevButton,sutButton,yemekButton;
     ImageButton disImage,ellerImage,kitapImage,meyveImage,odaImage,odevImage,sutImage,yemekImage;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,12 +39,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 v.getTag().toString();
-
                 Intent i=new Intent(getApplicationContext(),ReportActivity.class);
-                i.putExtra("job",v.getTag().toString());
-
+                i.putExtra("tag",v.getTag().toString());
                 startActivity(i);
-
             }
         };
 
@@ -64,9 +63,5 @@ public class MainActivity extends AppCompatActivity {
         odevImage.setOnClickListener(click);
         sutImage.setOnClickListener(click);
         yemekImage.setOnClickListener(click);
-
-
-
-
     }
 }

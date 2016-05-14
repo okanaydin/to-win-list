@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#263238"
+    android:background="@color/white"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
@@ -32,7 +32,6 @@
                 android:layout_height="match_parent"
                 android:gravity="center"
                 android:textSize="20sp"
-                android:textColor="@color/white"
                 android:layout_marginRight="5dp"
                 android:text="Biriken Altın:"/>
 
@@ -41,7 +40,6 @@
                 android:layout_height="match_parent"
                 android:gravity="center"
                 android:textSize="20sp"
-                android:textColor="@color/white"
                 android:layout_marginRight="5dp"
                 android:text="50"/>
 
@@ -64,7 +62,7 @@
             <ImageButton
                 android:tag="dis"
                 android:layout_width="wrap_content"
-                android:layout_height="150dp"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:background="@drawable/dis"
                 android:id="@+id/disImage"/>
@@ -88,7 +86,7 @@
             <ImageButton
                 android:tag="oda"
                 android:layout_width="wrap_content"
-                android:layout_height="150dp"
+                android:layout_height="wrap_content"
                 android:background="@drawable/oda"
                 android:layout_gravity="center_horizontal"
                 android:id="@+id/odaImage"/>
@@ -119,7 +117,7 @@
                 <ImageButton
                     android:tag="yemek"
                     android:layout_width="wrap_content"
-                    android:layout_height="150dp"
+                    android:layout_height="wrap_content"
                     android:background="@drawable/yemek"
                     android:layout_gravity="center_horizontal"
                     android:id="@+id/yemekImage"/>
@@ -142,7 +140,7 @@
                 <ImageButton
                     android:tag="kitap"
                     android:layout_width="wrap_content"
-                    android:layout_height="150dp"
+                    android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
                     android:background="@drawable/kitap"
                     android:id="@+id/kitapImage"/>
@@ -172,7 +170,7 @@
                 <ImageButton
                     android:tag="odev"
                     android:layout_width="wrap_content"
-                    android:layout_height="150dp"
+                    android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
                     android:background="@drawable/odev"
                     android:id="@+id/odevImage"/>
@@ -195,7 +193,7 @@
                 <ImageButton
                     android:tag="sut"
                     android:layout_width="wrap_content"
-                    android:layout_height="150dp"
+                    android:layout_height="wrap_content"
                     android:background="@drawable/sut"
                     android:layout_gravity="center_horizontal"
                     android:id="@+id/sutImage"/>
@@ -226,7 +224,7 @@
                 <ImageButton
                     android:tag="el"
                     android:layout_width="wrap_content"
-                    android:layout_height="150dp"
+                    android:layout_height="wrap_content"
                     android:background="@drawable/el"
                     android:layout_gravity="center_horizontal"
                     android:id="@+id/elImage"/>
@@ -249,7 +247,7 @@
                 <ImageButton
                     android:tag="meyve"
                     android:layout_width="wrap_content"
-                    android:layout_height="150dp"
+                    android:layout_height="wrap_content"
                     android:background="@drawable/meyve"
                     android:layout_gravity="center_horizontal"
                     android:id="@+id/meyveImage"/>

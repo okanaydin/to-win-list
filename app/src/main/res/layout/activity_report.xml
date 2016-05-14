@@ -33,6 +33,7 @@
 
         <Button
             android:text="Gönder"
+            android:id="@+id/btnSend"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content" />
