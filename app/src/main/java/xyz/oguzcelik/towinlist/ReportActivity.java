@@ -46,7 +46,7 @@ public class ReportActivity extends AppCompatActivity {
                 Intent cameraIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
                 if(cameraIntent.resolveActivity(getPackageManager()) != null) {
                     File photoFile = new File(Environment.getExternalStorageDirectory()
-                            +File.separator + jobTag + ".jpg");
+                            +File.separator + "towinlist" + File.separator + jobTag + ".jpg");
                     cameraIntent.putExtra(MediaStore.EXTRA_OUTPUT,Uri.fromFile(photoFile));
                     startActivityForResult(cameraIntent,REQUEST_IMAGE_CAPTURE);
                 }
@@ -57,7 +57,7 @@ public class ReportActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String photoPath = Environment.getExternalStorageDirectory()
-                        + File.separator + jobTag + ".jpg";
+                        + File.separator + "towinlist" + File.separator + jobTag + ".jpg";
                 Report report = new Report(jobTag,description.getText().toString(),5,photoPath);
                 try {
                     File file = new File(Environment.getExternalStorageDirectory()
@@ -87,7 +87,7 @@ public class ReportActivity extends AppCompatActivity {
     protected void onActivityResult(int requestCode,int resultCode,Intent data) {
         if(requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
             File file = new File(Environment.getExternalStorageDirectory()
-                    + File.separator + jobTag + ".jpg");
+                    + File.separator + "towinlist" + File.separator + jobTag + ".jpg");
             Bitmap imageBitmap = decodeSampledBitmapFromFile(file.getAbsolutePath(),750,425);
             imageButton.setImageBitmap(imageBitmap);
         }
