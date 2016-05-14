@@ -20,30 +20,6 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_horizontal"
-            android:orientation="horizontal">
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="ödüller"
-                android:id="@+id/odul"
-                android:background="@color/orange"
-                android:textColor="@color/white"
-                android:layout_marginRight="10dp"/>
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="LOGIN"
-                android:id="@+id/login"
-                android:background="@color/orange"
-                android:textColor="@color/white"/>
-
-        </LinearLayout>
-
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -73,7 +49,35 @@
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:src="@drawable/gold"/>
-            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="ödüller"
+                android:layout_weight="1"
+                android:id="@+id/odul"
+                android:background="@color/orange"
+                android:textColor="@color/white"
+                android:layout_marginRight="10dp"/>
+            <Button
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="LOGIN"
+                android:id="@+id/login"
+                android:background="@color/orange"
+                android:textColor="@color/white"/>
+
+        </LinearLayout>
+
+
 
     <LinearLayout
         android:layout_width="match_parent"
