@@ -3,11 +3,13 @@ package xyz.oguzcelik.towinlist;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class Confirmation extends AppCompatActivity {
+public class PrizesActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_confirmation);
+        setContentView(R.layout.activity_prize);
+
+
     }
 }
