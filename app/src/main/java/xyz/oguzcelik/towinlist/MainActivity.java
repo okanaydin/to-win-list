@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
         odul.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i=new Intent(getApplicationContext(),Prize.class);
+                Intent i=new Intent(getApplicationContext(),PrizesActivity.class);
                 startActivity(i);
             }
         });
@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent giris=new Intent(getApplicationContext(),Login.class);
+                Intent giris=new Intent(getApplicationContext(),LoginActivity.class);
                 startActivity(giris);
             }
         });

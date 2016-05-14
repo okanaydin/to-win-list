@@ -3,7 +3,7 @@ package xyz.oguzcelik.towinlist;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class Prize extends AppCompatActivity {
+public class PrizesActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

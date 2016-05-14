@@ -6,10 +6,13 @@ import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
 
-public class Login extends AppCompatActivity {
+public class LoginActivity extends AppCompatActivity {
 
     Button login;
+    EditText password;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,15 +26,19 @@ public class Login extends AppCompatActivity {
 
         getWindow().setLayout((int) (width*.8),(int) (height*.6));
 
-
-
-        login=(Button)findViewById(R.id.login);
+        login = (Button)findViewById(R.id.login);
+        password = (EditText) findViewById(R.id.editText);
 
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent login=new Intent(getApplicationContext(),Confirmation.class);
-                startActivity(login);
+                Intent login=new Intent(getApplicationContext(),ConfirmationActivity.class);
+                if(password.getText().toString().equals("1234")) {
+                    startActivity(login);
+                }
+                else {
+                    Toast.makeText(getApplicationContext(),"Şifre Yanlış !",Toast.LENGTH_SHORT).show();
+                }
             }
         });
     }

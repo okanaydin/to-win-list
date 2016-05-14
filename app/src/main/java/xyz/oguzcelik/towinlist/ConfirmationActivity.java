@@ -10,7 +10,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
-public class Confirmation extends AppCompatActivity {
+public class ConfirmationActivity extends AppCompatActivity {
 
     ListView listItemView;
     String[] listItemsValue = new String[] {"Deneme1","Deneme2","Deneme3","Deneme4","Deneme5","Deneme6"};
