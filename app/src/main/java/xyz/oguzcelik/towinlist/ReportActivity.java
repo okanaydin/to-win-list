@@ -21,6 +21,7 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
+import java.security.Permission;
 
 public class ReportActivity extends AppCompatActivity {
 
@@ -49,7 +50,11 @@ public class ReportActivity extends AppCompatActivity {
                     File photoFile = new File(Environment.getExternalStorageDirectory()
                             +File.separator + "towinlist" + File.separator + jobTag + ".jpg");
                     cameraIntent.putExtra(MediaStore.EXTRA_OUTPUT,Uri.fromFile(photoFile));
-                    startActivityForResult(cameraIntent,REQUEST_IMAGE_CAPTURE);
+                    int permissionCheck = ContextCompat.checkSelfPermission(getApplicationContext(), Manifest.permission.WRITE_EXTERNAL_STORAGE);
+                    if(permissionCheck == android.content.pm.PackageManager.PERMISSION_GRANTED) {
+                        startActivityForResult(cameraIntent,REQUEST_IMAGE_CAPTURE);
+                    }
+
                 }
             }
         });
