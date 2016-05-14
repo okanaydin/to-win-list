@@ -1,11 +1,13 @@
 package xyz.oguzcelik.towinlist;
 
+import android.Manifest;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Environment;
 import android.provider.MediaStore;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -18,7 +20,6 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.ObjectOutput;
 import java.io.ObjectOutputStream;
 
 public class ReportActivity extends AppCompatActivity {
@@ -69,6 +70,7 @@ public class ReportActivity extends AppCompatActivity {
                     ObjectOutputStream oos = new ObjectOutputStream(fos);
                     oos.writeObject(report);
                     Toast.makeText(getApplicationContext(),"Başarıyla gönderildi.",Toast.LENGTH_SHORT).show();
+                    int permissionCheck = ContextCompat.checkSelfPermission(getApplicationContext(), Manifest.permission.WRITE_EXTERNAL_STORAGE);
                     Intent i = new Intent(getApplicationContext(),MainActivity.class);
                     startActivity(i);
                 } catch (FileNotFoundException e) {
