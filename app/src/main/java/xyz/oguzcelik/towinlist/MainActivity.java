@@ -10,6 +10,7 @@ import android.widget.ImageButton;
 
 public class MainActivity extends AppCompatActivity {
     Button disButton,ellerButton,kitapButton,meyveButton,odaButton,odevButton,sutButton,yemekButton;
+    Button odul;
     ImageButton disImage,ellerImage,kitapImage,meyveImage,odaImage,odevImage,sutImage,yemekImage;
 
 
@@ -26,6 +27,9 @@ public class MainActivity extends AppCompatActivity {
         odevButton=(Button)findViewById(R.id.odevButton);
         sutButton=(Button)findViewById(R.id.sutButton);
         yemekButton=(Button)findViewById(R.id.yemekButton);
+
+        odul=(Button)findViewById(R.id.odul);
+
         disImage=(ImageButton) findViewById(R.id.disImage);
         ellerImage=(ImageButton) findViewById(R.id.elImage);
         kitapImage=(ImageButton) findViewById(R.id.kitapImage);
@@ -34,6 +38,16 @@ public class MainActivity extends AppCompatActivity {
         odevImage=(ImageButton) findViewById(R.id.odevImage);
         sutImage=(ImageButton) findViewById(R.id.sutImage);
         yemekImage=(ImageButton) findViewById(R.id.yemekImage);
+
+        odul.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i=new Intent(getApplicationContext(),Prize.class);
+                startActivity(i);
+            }
+        });
+
+
 
         Button.OnClickListener click=new View.OnClickListener() {
             @Override

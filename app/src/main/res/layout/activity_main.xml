@@ -20,12 +20,21 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
             android:gravity="right"
             android:orientation="horizontal">
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ödüller"
+                android:id="@+id/odul"
+                android:background="@color/orange"
+                android:textColor="@color/white"
+                android:layout_marginRight="40dp"/>
 
             <TextView
                 android:layout_width="wrap_content"

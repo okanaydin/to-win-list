@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#263238"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="xyz.oguzcelik.towinlist.Prize">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:gravity="right"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:layout_marginRight="5dp"
+            android:text="Biriken Altın:"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:layout_marginRight="5dp"
+            android:text="50"/>
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/gold"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+            <ImageButton
+                android:tag="lunapark"
+                android:layout_width="wrap_content"
+                android:layout_height="130dp"
+                android:background="@color/white"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/lunapark"
+                android:scaleType="centerInside"
+                android:id="@+id/lunaparkImage"/>
+            <Button
+                android:tag="dis"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:id="@+id/lunaparkButton"
+                android:background="@color/colorPrimary"
+                android:text="Lunapark"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:background="@color/white"
+            android:orientation="vertical">
+            <ImageButton
+                android:tag="sinema"
+                android:layout_width="wrap_content"
+                android:layout_height="130dp"
+                android:src="@drawable/sinema"
+                android:background="@color/white"
+                android:scaleType="centerInside"
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/sinemaImage"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:id="@+id/sinemaButton"
+                android:background="@color/colorPrimary"
+                android:text="Sinema"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+            <ImageButton
+                android:tag="oyuncak"
+                android:layout_width="wrap_content"
+                android:layout_height="130dp"
+                android:src="@drawable/oyuncak"
+                android:background="@color/white"
+                android:scaleType="centerInside"
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/oyuncakImage"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:background="@color/colorPrimary"
+                android:id="@+id/oyuncakButton"
+                android:text="Oyuncak"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:background="@color/white"
+            android:orientation="vertical">
+            <ImageButton
+                android:tag="akvaryum"
+                android:layout_width="wrap_content"
+                android:layout_height="130dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/akvaryum"
+                android:scaleType="centerInside"
+                android:background="@color/white"
+                android:id="@+id/akvayumImage"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:background="@color/colorPrimary"
+                android:id="@+id/akvaryumButton"
+                android:text="Akvaryum"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+            <ImageButton
+                android:tag="dondurma"
+                android:layout_width="wrap_content"
+                android:layout_height="130dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/dondurma"
+                android:background="@color/white"
+                android:scaleType="centerInside"
+                android:id="@+id/dondurmaImage"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:textColor="@color/white"
+                android:id="@+id/dondurmaButton"
+                android:text="Dondurma"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:background="@color/white"
+            android:orientation="vertical">
+            <ImageButton
+                android:tag="havuz"
+                android:layout_width="wrap_content"
+                android:layout_height="130dp"
+                android:src="@drawable/havuz"
+                android:scaleType="centerInside"
+                android:background="@color/white"
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/havuzImage"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:textColor="@color/white"
+                android:id="@+id/havuzButton"
+                android:text="Havuz"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>
+    </ScrollView>
+</RelativeLayout>
