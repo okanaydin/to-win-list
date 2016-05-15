@@ -17,11 +17,14 @@ import android.widget.ImageButton;
 import android.widget.Toast;
 
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
-import java.security.Permission;
+import java.util.ArrayList;
+import java.util.List;
 
 public class ReportActivity extends AppCompatActivity {
 
@@ -68,18 +71,34 @@ public class ReportActivity extends AppCompatActivity {
                 try {
                     File file = new File(Environment.getExternalStorageDirectory()
                             + File.separator + "towinlist" + File.separator + "jobsDone.txt");
+                    List<Report> reports = null;
                     if(!file.exists()) {
                         file.createNewFile();
+                    } else {
+                        FileInputStream fis = new FileInputStream(file);
+                        ObjectInputStream ois = new ObjectInputStream(fis);
+                        reports = (List<Report>) ois.readObject();
+                        ois.close();
+                        fis.close();
                     }
-                    FileOutputStream fos = new FileOutputStream(file, true);
+
+                    if(reports == null) {
+                        reports = new ArrayList<Report>();
+                    }
+                    FileOutputStream fos = new FileOutputStream(file);
                     ObjectOutputStream oos = new ObjectOutputStream(fos);
-                    oos.writeObject(report);
+                    reports.add(report);
+                    oos.writeObject(reports);
+                    oos.close();
+                    fos.close();
                     Toast.makeText(getApplicationContext(),"Başarıyla gönderildi.",Toast.LENGTH_SHORT).show();
                     Intent i = new Intent(getApplicationContext(),MainActivity.class);
                     startActivity(i);
                 } catch (FileNotFoundException e) {
                     e.printStackTrace();
                 } catch (IOException e) {
+                    e.printStackTrace();
+                } catch (ClassNotFoundException e) {
                     e.printStackTrace();
                 }
             }

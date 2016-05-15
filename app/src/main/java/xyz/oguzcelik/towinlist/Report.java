@@ -1,12 +1,13 @@
 package xyz.oguzcelik.towinlist;
 
 import java.io.Serializable;
-import java.util.Date;
 
 /**
  * Created by Cynapsis on 5/14/2016.
  */
 public class Report implements Serializable {
+    static final long serialVersionUID = 1L;
+
     String name,description;
     int prize;
     String photoUrl;
@@ -18,4 +19,11 @@ public class Report implements Serializable {
         this.photoUrl = photoUrl;
     }
 
+    public String getDescription() {
+        return description;
+    }
+
+    public String getPhotoUrl() {
+        return photoUrl;
+    }
 }
