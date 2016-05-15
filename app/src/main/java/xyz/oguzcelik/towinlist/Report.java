@@ -9,10 +9,10 @@ public class Report implements Serializable {
     static final long serialVersionUID = 1L;
 
     String name,description;
-    int prize;
+    long prize;
     String photoUrl;
 
-    public Report(String name, String description, int prize, String photoUrl) {
+    public Report(String name, String description, long prize, String photoUrl) {
         this.name = name;
         this.description = description;
         this.prize = prize;

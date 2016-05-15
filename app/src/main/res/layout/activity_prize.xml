@@ -38,12 +38,13 @@
             android:text="Biriken Altın:"/>
 
         <TextView
+            android:id="@+id/prizesGoldTxt"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:gravity="center"
             android:textSize="20sp"
             android:layout_marginRight="5dp"
-            android:text="50"/>
+            android:text="-"/>
 
         <ImageView
             android:layout_width="40dp"
@@ -52,6 +53,7 @@
     </LinearLayout>
 
     <LinearLayout
+        android:gravity="center_horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
@@ -71,7 +73,7 @@
                 android:scaleType="centerInside"
                 android:id="@+id/lunaparkImage"/>
             <Button
-                android:tag="dis"
+                android:tag="lunapark"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/white"
@@ -97,6 +99,7 @@
                 android:layout_gravity="center_horizontal"
                 android:id="@+id/sinemaImage"/>
             <Button
+                android:tag="sinema"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/white"
@@ -110,6 +113,7 @@
 
 
     <LinearLayout
+        android:gravity="center_horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
@@ -130,6 +134,7 @@
                 android:layout_gravity="center_horizontal"
                 android:id="@+id/oyuncakImage"/>
             <Button
+                android:tag="oyuncak"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/white"
@@ -155,6 +160,7 @@
                 android:background="@color/white"
                 android:id="@+id/akvayumImage"/>
             <Button
+                android:tag="akvaryum"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/white"
@@ -167,6 +173,7 @@
     </LinearLayout>
 
     <LinearLayout
+        android:gravity="center_horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
@@ -187,6 +194,7 @@
                 android:scaleType="centerInside"
                 android:id="@+id/dondurmaImage"/>
             <Button
+                android:tag="dondurma"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/colorPrimary"
@@ -212,6 +220,7 @@
                 android:layout_gravity="center_horizontal"
                 android:id="@+id/havuzImage"/>
             <Button
+                android:tag="havuz"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/colorPrimary"

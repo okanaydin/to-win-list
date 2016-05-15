@@ -67,7 +67,7 @@ public class ReportActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String photoPath = Environment.getExternalStorageDirectory()
                         + File.separator + "towinlist" + File.separator + jobTag + ".jpg";
-                Report report = new Report(jobTag,description.getText().toString(),5,photoPath);
+                Report report = new Report(jobTag,description.getText().toString(), (long) MainActivity.prizes.get(jobTag),photoPath);
                 try {
                     File file = new File(Environment.getExternalStorageDirectory()
                             + File.separator + "towinlist" + File.separator + "jobsDone.txt");

@@ -1,20 +1,23 @@
 package xyz.oguzcelik.towinlist;
 
 import android.app.Dialog;
-import android.content.DialogInterface;
 import android.os.Environment;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.LinearLayoutCompat;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.firebase.client.DataSnapshot;
+import com.firebase.client.Firebase;
+import com.firebase.client.FirebaseError;
+import com.firebase.client.Query;
+import com.firebase.client.ValueEventListener;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -86,6 +89,20 @@ public class ConfirmationActivity extends AppCompatActivity {
                         // do something
                         dialog.dismiss();
                         adapter.notifyDataSetChanged();
+                        final Firebase firebaseRef = new Firebase(MainActivity.firebaseURL);
+
+                        firebaseRef.child("gold").addListenerForSingleValueEvent(new ValueEventListener() {
+                            @Override
+                            public void onDataChange(DataSnapshot dataSnapshot) {
+                                firebaseRef.child("gold").setValue((long)dataSnapshot.getValue() + report.prize);
+                            }
+
+                            @Override
+                            public void onCancelled(FirebaseError firebaseError) {
+
+                            }
+                        });
+
                     }
                 });
                 negativeButton.setOnClickListener(new View.OnClickListener() {
