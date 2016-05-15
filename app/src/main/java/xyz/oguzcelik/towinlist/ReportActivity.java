@@ -50,9 +50,12 @@ public class ReportActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent cameraIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+
                 if(cameraIntent.resolveActivity(getPackageManager()) != null) {
                     File photoFile = new File(Environment.getExternalStorageDirectory()
                             +File.separator + "towinlist" + File.separator + jobTag + ".jpg");
+
+
                     cameraIntent.putExtra(MediaStore.EXTRA_OUTPUT,Uri.fromFile(photoFile));
                     int permissionCheck = ContextCompat.checkSelfPermission(getApplicationContext()
                             , Manifest.permission.WRITE_EXTERNAL_STORAGE);
@@ -110,8 +113,6 @@ public class ReportActivity extends AppCompatActivity {
         });
 
     }
-
-
 
     @Override
     protected void onActivityResult(int requestCode,int resultCode,Intent data) {

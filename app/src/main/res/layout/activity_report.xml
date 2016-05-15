@@ -35,12 +35,9 @@
             android:text="Gönder"
             android:id="@+id/btnSend"
             android:layout_width="0dp"
+            android:background="@color/colorPrimary"
             android:layout_weight="1"
-            android:layout_height="wrap_content" />
-        <Button
-            android:text="Paylaş"
-            android:layout_width="0dp"
-            android:layout_weight="1"
+            android:textColor="#FFFFFF"
             android:layout_height="wrap_content" />
 
     </LinearLayout>
