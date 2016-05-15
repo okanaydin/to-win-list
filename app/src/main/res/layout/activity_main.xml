@@ -60,21 +60,23 @@
 
             <Button
                 android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Giriş Yap"
+                android:id="@+id/login"
+                android:background="@color/orange"
+                android:textColor="@color/white"/>
+
+            <Button
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:text="ödüller"
                 android:layout_weight="1"
                 android:id="@+id/odul"
                 android:background="@color/orange"
                 android:textColor="@color/white"
-                android:layout_marginRight="10dp"/>
-            <Button
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="wrap_content"
-                android:text="LOGIN"
-                android:id="@+id/login"
-                android:background="@color/orange"
-                android:textColor="@color/white"/>
+                android:layout_marginLeft="10dp"/>
+
 
         </LinearLayout>
 
@@ -83,6 +85,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
         android:orientation="horizontal">
 
         <LinearLayout
@@ -255,7 +258,7 @@
                 <ImageButton
                     android:tag="el"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="129dp"
                     android:background="@drawable/el"
                     android:layout_gravity="center_horizontal"
                     android:id="@+id/elImage"/>

@@ -2,6 +2,7 @@ package xyz.oguzcelik.towinlist;
 
 import android.Manifest;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
@@ -53,8 +54,12 @@ public class ReportActivity extends AppCompatActivity {
                     File photoFile = new File(Environment.getExternalStorageDirectory()
                             +File.separator + "towinlist" + File.separator + jobTag + ".jpg");
                     cameraIntent.putExtra(MediaStore.EXTRA_OUTPUT,Uri.fromFile(photoFile));
-                    int permissionCheck = ContextCompat.checkSelfPermission(getApplicationContext(), Manifest.permission.WRITE_EXTERNAL_STORAGE);
-                    if(permissionCheck == android.content.pm.PackageManager.PERMISSION_GRANTED) {
+                    int permissionCheck = ContextCompat.checkSelfPermission(getApplicationContext()
+                            , Manifest.permission.WRITE_EXTERNAL_STORAGE);
+                    int cameraPermissionCheck = ContextCompat.checkSelfPermission(getApplicationContext()
+                            , Manifest.permission.CAMERA);
+                    if(permissionCheck == android.content.pm.PackageManager.PERMISSION_GRANTED
+                            && cameraPermissionCheck == PackageManager.PERMISSION_GRANTED) {
                         startActivityForResult(cameraIntent,REQUEST_IMAGE_CAPTURE);
                     }
 
